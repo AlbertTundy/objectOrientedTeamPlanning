@@ -103,7 +103,20 @@ function init() {
                 name: "userSelection",
                 message: "What kind employee would you like to add to your team?",
                 choices: ['Manager', 'Engineer', 'Intern', 'none'],
-            }])
+            }]) .then(function(response){
+                switch(response.userSelection) {
+                    case "Manager":
+                        makeManager();
+                    break;
+                    case "Engineer":
+                        makeEngineer()
+                    break;
+                    case "Intern":
+                        makeIntern()
+                    break;
+                    default: renderTeam()
+                }
+            }) 
 
     };
   function renderTeam() {
