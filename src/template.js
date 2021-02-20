@@ -22,16 +22,16 @@ const makeTeam = team => {
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
     );
-    html.push(team
-        .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => generateEngineer(engineer))
-        .join("")
-    );
-    html.push(team
-        .filter(employee => employee.getRole() === "Intern")
-        .map(intern => generateIntern(intern))
-        .join("")
-    );
+    // html.push(team
+    //     .filter(employee => employee.getRole() === "Engineer")
+    //     .map(engineer => generateEngineer(engineer))
+    //     .join("")
+    // );
+    // html.push(team
+    //     .filter(employee => employee.getRole() === "Intern")
+    //     .map(intern => generateIntern(intern))
+    //     .join("")
+    // );
     return html.join("");
 };
 module.exports = team => {
@@ -59,9 +59,11 @@ module.exports = team => {
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-                ${generateTeam(team)}
+                ${makeTeam(team)}
             </div>
         </div>
     </div>
 </body>
 </html>
+`;
+};

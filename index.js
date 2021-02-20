@@ -37,6 +37,7 @@ function init() {
         ]) .then (function(response) {
             const newManager = new Manager(response.managersName, response.managerId, response.managerEmail, response.managerOfficeNumber)
             teamArray.push(newManager)
+            teamController()
         })
         
     }
@@ -65,6 +66,7 @@ function init() {
         ]) .then (function(response) {
             const newEngineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.managerOfficeNumber)
             teamArray.push(newEngineer)
+            teamController()
         })
         
     }
@@ -93,6 +95,7 @@ function init() {
         ]) .then (function(response) {
             const newIntern = new Manager(response.internName, response.internId, response.internEmail, response.internSchool)
             teamArray.push(newIntern)
+            teamController()
         })
         
     }
@@ -122,5 +125,6 @@ function init() {
   function renderTeam() {
       fs.writeFileSync(outputPath, render(teamArray), "utf8")
   }; 
+  makeManager()
 }
 init()
