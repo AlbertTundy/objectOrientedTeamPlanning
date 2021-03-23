@@ -1,7 +1,5 @@
 # objectOrientedTeamPlanning
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Description:
 
 It is a simple way to track your team. <br/>
@@ -15,7 +13,6 @@ It is a simple way to track your team. <br/>
 [Usage](#Usage)<br/>
 [Contributing](#Contributing)<br/>
 [Tests](#Tests)<br/>
-[License](#License)<br/>
 [Questions](#Questions)<br/>
 
 ## Function:
@@ -41,10 +38,6 @@ Open for branches.
 ## Tests:
 
 N.A.
-
-## License: <br/>
-
-This is licensed by MIT all rights reserved
 
 ## Questions:
 
