@@ -64,7 +64,7 @@ function init() {
            message: "What is your engineer's github?",
         },
         ]) .then (function(response) {
-            const newEngineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.managerOfficeNumber)
+            const newEngineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGithub)
             teamArray.push(newEngineer)
             teamController()
         })
@@ -93,7 +93,7 @@ function init() {
            message: "What is your intern's school?",
         },
         ]) .then (function(response) {
-            const newIntern = new Manager(response.internName, response.internId, response.internEmail, response.internSchool)
+            const newIntern = new Intern(response.internName, response.internId, response.internEmail, response.internSchool)
             teamArray.push(newIntern)
             teamController()
         })
